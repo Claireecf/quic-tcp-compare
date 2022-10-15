@@ -5,7 +5,7 @@ use rocket::request::Form;
 use rocket::response::content::Json;
 use rocket::Request;
 use rocket_contrib::templates::Template;
-use rocket::fs::{FileServer, relative, TempFile};
+//use rocket::fs::{FileServer, relative, TempFile};
 use serde::Serialize;
 
 mod utils;
@@ -109,7 +109,7 @@ fn main() {
       .mount("/", routes![fetch_file])
       .mount("/", routes![hi])
       .mount("/", routes![downloadpage])
-      .mount("/public", FileServer::from("/file"))
+     // .mount("/public", FileServer::from("/file"))
       .attach(Template::fairing())
       .launch();
 }
