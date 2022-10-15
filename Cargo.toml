@@ -1,0 +1,18 @@
+[package]
+name = "quic-tcp-compare"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.4.11"
+serde = { version = "1.0", features = ["derive"] }
+reqwest = "0.11.12"
+tokio = { version = "1.21.2", features = ["full"] }
+tempdir = "0.3.7"
+tempfile = "3.3.0"
+
+[dependencies.rocket_contrib]
+version = "0.4.5"
+features = ["handlebars_templates"]
